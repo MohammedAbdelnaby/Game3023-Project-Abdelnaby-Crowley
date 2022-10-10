@@ -5,31 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void PlayButton()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("SnowWorld");
+    }
+
+    public void MainMenuButton()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void ContiueButton()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("SnowWorld");
     }
 
     public void CreditsButton()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Credits");
     }
 
     public void QuitButton()
