@@ -5,9 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
-    public void PlayButton()
+    public void WinterButton()
     {
         SceneManager.LoadScene("SnowWorld");
+    }
+
+    public void SummerButton()
+    {
+        SceneManager.LoadScene("SummerWorld");
     }
 
     public void MainMenuButton()
