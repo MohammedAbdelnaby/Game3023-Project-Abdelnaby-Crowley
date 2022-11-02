@@ -5,24 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
-    public void WinterButton()
+
+    public void ContinueButton()
     {
-        SceneManager.LoadScene("SnowWorld");
+        SceneManager.LoadScene("OverWorld");
     }
 
-    public void SummerButton()
+    public void NewWorldButton()
     {
-        SceneManager.LoadScene("SummerWorld");
+        SceneManager.LoadScene("OverWorld");
     }
 
     public void MainMenuButton()
     {
         SceneManager.LoadScene("MainMenu");
-    }
-
-    public void ContiueButton()
-    {
-        SceneManager.LoadScene("SnowWorld");
     }
 
     public void CreditsButton()
