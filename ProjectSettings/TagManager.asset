@@ -53,9 +53,18 @@ TagManager:
   - name: OnGround
     uniqueID: 1294398685
     locked: 0
+  - name: Wall
+    uniqueID: 4213142805
+    locked: 0
+  - name: Roof
+    uniqueID: 1623043107
+    locked: 0
   - name: UpperGround
     uniqueID: 3013104837
     locked: 0
   - name: UI
     uniqueID: 2615232657
+    locked: 0
+  - name: Player
+    uniqueID: 2991558555
     locked: 0
