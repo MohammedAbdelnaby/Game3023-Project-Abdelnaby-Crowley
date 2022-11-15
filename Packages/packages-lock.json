@@ -1,11 +1,5 @@
 {
   "dependencies": {
-    "com.pandm.battlescenepack": {
-      "version": "file:D:/College/College2022-2023/GameEngines3/Labs/GAME3023_Labs/GAME3023-2022-Lab10/Packages/BattleScenePack",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {}
-    },
     "com.unity.2d.animation": {
       "version": "8.0.3",
       "depth": 1,
