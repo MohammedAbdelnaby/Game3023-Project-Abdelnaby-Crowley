@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.pandm.battlescenepack": "file:D:/College/College2022-2023/GameEngines3/Labs/GAME3023_Labs/GAME3023-2022-Lab10/Packages/BattleScenePack",
     "com.unity.collab-proxy": "1.17.2",
     "com.unity.feature.2d": "1.0.0",
     "com.unity.ide.rider": "3.0.15",
