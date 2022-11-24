@@ -5,34 +5,38 @@ using UnityEngine.UI;
 
 public class BattleSystem : MonoBehaviour
 {
+    [Header("Battle UI")]
     public Text historyText;
 
+    [Header("Player Properties")]
     public int playerHealth;
     public int playerMana;
-    public string enemyName;
     public string playerName;
-    public Text healthText;
-    public Text manaText;
-    public Text playerNameText;
+    public List<PlayerAbility> playerAbilities;
+    public Buffs playerBuff;
+    public Debuffs playerDebuff;
+    public bool isPlayerTurn = true;
 
-    private bool playerTurn = true;
+    [Header("Enemy Properties")]
+    public string enemyName;
+    public int enemyHealth;
+    public int enemyMana;
+    public List<PlayerAbility> enemyAbilities;
+    public Buffs enemyBuff;
+    public Debuffs enemyDebuff;
 
     float timeBetweenTurns = 0.0f;
 
-    
     // Start is called before the first frame update
     void Start()
     {
-        playerName = playerNameText.text.Replace("\n", "");
         historyText.text = enemyName + " stands in your way";
-        healthText.text = playerHealth.ToString();
-        manaText.text = playerMana.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!playerTurn)
+        if (!isPlayerTurn)
         {
             timeBetweenTurns += Time.deltaTime;
             if (timeBetweenTurns >= 3.0f)
@@ -45,7 +49,7 @@ public class BattleSystem : MonoBehaviour
 
     public void Attack()
     {
-        if (playerTurn)
+        if (isPlayerTurn)
         {
             historyText.text = playerName + " strikes " + enemyName;
             SwapTurns();
@@ -55,11 +59,10 @@ public class BattleSystem : MonoBehaviour
 
     public void Magic()
     {
-        if (playerTurn)
+        if (isPlayerTurn)
         {
             historyText.text = playerName + " Casts Flame Wheel";
             playerMana -= 10;
-            manaText.text = playerMana.ToString();
             SwapTurns();
         }
         
@@ -67,7 +70,7 @@ public class BattleSystem : MonoBehaviour
 
     public void UseItem()
     {
-        if (playerTurn)
+        if (isPlayerTurn)
         {
             historyText.text = "You have no items";
         }
@@ -76,7 +79,7 @@ public class BattleSystem : MonoBehaviour
 
     public void RunAway()
     {
-        if (playerTurn)
+        if (isPlayerTurn)
         {
             historyText.text = "You can't run away";
         }
@@ -85,7 +88,7 @@ public class BattleSystem : MonoBehaviour
 
     public void Defend()
     {
-        if (playerTurn)
+        if (isPlayerTurn)
         {
             historyText.text = playerName + " braces for impact";
             SwapTurns();
@@ -95,7 +98,7 @@ public class BattleSystem : MonoBehaviour
 
     public void SwapTurns()
     {
-        playerTurn = !playerTurn;
+        isPlayerTurn = !isPlayerTurn;
     }
 
     public void EnemyAction()
