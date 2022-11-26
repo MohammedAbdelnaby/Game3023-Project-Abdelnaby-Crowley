@@ -18,5 +18,5 @@ MonoBehaviour:
   Buff: 0
   Debuff: 0
   ManaCost: 0
-  Damage: 0
+  Damage: 25
   Heal: 0

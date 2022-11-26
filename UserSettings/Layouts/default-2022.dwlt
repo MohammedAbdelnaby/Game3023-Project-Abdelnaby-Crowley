@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1858
     height: 1037
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 44
+  controlID: 108
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -272,8 +272,8 @@ MonoBehaviour:
     y: 0
     width: 376
     height: 987
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -570,9 +570,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.1770487, y: -1.425972, z: 1.1760604}
+    m_Target: {x: 0.18137603, y: 1.088976, z: 1.1197108}
     speed: 2
-    m_Value: {x: 0.9346967, y: -1.4643157, z: 1.1787641}
+    m_Value: {x: 0.18137603, y: 1.088976, z: 1.1197108}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -622,9 +622,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 6.278644
+    m_Target: 5.1251335
     speed: 2
-    m_Value: 6.0082717
+    m_Value: 5.1251335
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -680,9 +680,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 526b0000
-      m_LastClickedID: 27474
-      m_ExpandedIDs: 9af7ffff24fbffffac6a0000c66a0000d66a0000ea6a0000f06a0000086b0000206b0000406b0000486b0000686b0000726b0000946b0000ae6b0000
+      m_SelectedIDs: bc6b0000
+      m_LastClickedID: 27580
+      m_ExpandedIDs: 24fbffff386b0000586b0000a46b0000ac6b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -966,22 +966,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Prefabs
+    - Assets/Resources/PlayerAbilities
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Prefabs
+  - Assets/Resources/PlayerAbilities
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Mohammed Abdelnaby\source\Unity repo\Game3023-Project-Abdelnaby-Crowley
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 686e0000
-    m_LastClickedID: 28264
-    m_ExpandedIDs: 00000000a86c0000626e00006e6e00002c6f0000eaa5000000ca9a3bffffff7f
+    m_SelectedIDs: a86f0000
+    m_LastClickedID: 28584
+    m_ExpandedIDs: 00000000266f00006c6f000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1009,7 +1009,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a86c0000
+    m_ExpandedIDs: 00000000266f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

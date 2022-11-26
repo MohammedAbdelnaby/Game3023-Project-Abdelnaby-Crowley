@@ -14,6 +14,14 @@ public class BattleUI : MonoBehaviour
     public GameObject defenceParent;
     public GameObject ItemParent;
 
+    [Header("Player UI Properties")]
+    public TMP_Text playerHealth;
+    public TMP_Text playerMana;
+
+    [Header("Enemy UI Properties")]
+    public TMP_Text enemyHealth;
+    public TMP_Text enemyMana;
+
     private BattleSystem battleSystem;
     private List<PlayerAbility> playerAttackAbilies;
     private List<PlayerAbility> playerMagicAbilies;
@@ -26,7 +34,7 @@ public class BattleUI : MonoBehaviour
     void Start()
     {
         MainMenuState = 0;
-        battleSystem = GameObject.Find("BattleManager").GetComponent<BattleSystem>();
+        battleSystem = GetComponent<BattleSystem>();
         playerAttackAbilies = new List<PlayerAbility>();
         playerMagicAbilies = new List<PlayerAbility>();
         playerDefenceAbilies = new List<PlayerAbility>();
@@ -87,6 +95,11 @@ public class BattleUI : MonoBehaviour
     private void UpdateUI()
     {
         //Enemy UI, and player UI (health, mana)
+        playerHealth.text = battleSystem.playerHealth.ToString();
+        playerMana.text = battleSystem.playerMana.ToString();
+
+        enemyHealth.text = battleSystem.enemyHealth.ToString();
+        enemyMana.text = battleSystem.enemyMana.ToString();
     }
 
     private void CreateButtons()

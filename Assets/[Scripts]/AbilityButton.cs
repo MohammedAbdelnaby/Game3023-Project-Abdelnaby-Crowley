@@ -8,7 +8,7 @@ public class AbilityButton : MonoBehaviour
 {
     public PlayerAbility ability;
 
-    private BattleSystem battleSystem;
+    public BattleSystem battleSystem;
     private Button button;
     // Start is called before the first frame update
     void Start()
@@ -26,10 +26,15 @@ public class AbilityButton : MonoBehaviour
 
     public void DoAbility()
     {
-        battleSystem.enemyHealth -= ability.Damage;
-        battleSystem.playerMana -= ability.ManaCost;
-        battleSystem.enemyDebuff = ability.Debuff;
-        battleSystem.playerBuff = ability.Buff;
-        battleSystem.playerHealth += ability.Heal;
+        if (battleSystem.isPlayerTurn)
+        {
+            battleSystem.enemyHealth -= ability.Damage;
+            battleSystem.playerMana -= ability.ManaCost;
+            battleSystem.enemyDebuff = ability.Debuff;
+            battleSystem.playerBuff = ability.Buff;
+            battleSystem.playerHealth += ability.Heal;
+            battleSystem.isPlayerTurn = false;
+            battleSystem.historyText.text = ability.Name + ": " + ability.Description; 
+        }
     }
 }
