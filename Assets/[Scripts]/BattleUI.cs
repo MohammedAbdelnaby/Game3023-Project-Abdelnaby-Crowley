@@ -12,6 +12,7 @@ public class BattleUI : MonoBehaviour
     public GameObject attackParent;
     public GameObject magicParent;
     public GameObject defenceParent;
+    public GameObject ItemParent;
 
     private BattleSystem battleSystem;
     private List<PlayerAbility> playerAttackAbilies;
@@ -26,7 +27,9 @@ public class BattleUI : MonoBehaviour
     {
         MainMenuState = 0;
         battleSystem = GameObject.Find("BattleManager").GetComponent<BattleSystem>();
-
+        playerAttackAbilies = new List<PlayerAbility>();
+        playerMagicAbilies = new List<PlayerAbility>();
+        playerDefenceAbilies = new List<PlayerAbility>();
         CreateButtons();
     }
 
@@ -46,24 +49,35 @@ public class BattleUI : MonoBehaviour
                 attackParent.SetActive(false);
                 magicParent.SetActive(false);
                 defenceParent.SetActive(false);
+                ItemParent.SetActive(false);
                 break;
             case 1: //Attack
                 mainMenu.SetActive(false);
                 attackParent.SetActive(true);
                 magicParent.SetActive(false);
                 defenceParent.SetActive(false);
+                ItemParent.SetActive(false);
                 break;
             case 2:// Magic
                 mainMenu.SetActive(false);
                 attackParent.SetActive(false);
                 magicParent.SetActive(true);
                 defenceParent.SetActive(false);
+                ItemParent.SetActive(false);
                 break;
             case 3:// Defence
                 mainMenu.SetActive(false);
                 attackParent.SetActive(false);
                 magicParent.SetActive(false);
                 defenceParent.SetActive(true);
+                ItemParent.SetActive(false);
+                break;
+            case 4:// Item
+                mainMenu.SetActive(false);
+                attackParent.SetActive(false);
+                magicParent.SetActive(false);
+                defenceParent.SetActive(false);
+                ItemParent.SetActive(true);
                 break;
             default:
                 break;
@@ -101,5 +115,10 @@ public class BattleUI : MonoBehaviour
                     break;
             }
         }
+    }
+
+    public void ChangeStateButton(int value)
+    {
+        MainMenuState = value;
     }
 }

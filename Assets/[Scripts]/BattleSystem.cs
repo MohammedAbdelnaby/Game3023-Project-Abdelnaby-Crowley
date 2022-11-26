@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class BattleSystem : MonoBehaviour
 {
     [Header("Battle UI")]
-    public Text historyText;
+    public TMP_Text historyText;
 
     [Header("Player Properties")]
     public int playerHealth;
     public int playerMana;
     public string playerName;
-    public List<PlayerAbility> playerAbilities;
+    public PlayerAbility[] playerAbilities;
     public Buffs playerBuff;
     public Debuffs playerDebuff;
     public bool isPlayerTurn = true;
@@ -31,6 +32,7 @@ public class BattleSystem : MonoBehaviour
     void Start()
     {
         historyText.text = enemyName + " stands in your way";
+        playerAbilities = Resources.LoadAll<PlayerAbility>("PlayerAbilities");
     }
 
     // Update is called once per frame
