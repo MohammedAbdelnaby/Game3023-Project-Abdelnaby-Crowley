@@ -14,10 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/[Scenes]/Credits.unity
     guid: abad629b9d8bbcd4d953f6551953bab3
-  - enabled: 1
-    path: Assets/Scenes/SnowWorld.unity
-    guid: b080501e88508d244ad3fa2f3310fb8c
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/[Scenes]/OverWorld.unity
     guid: b9e546e319fcfca47b8e63356d506127
+  - enabled: 1
+    path: Assets/[Scenes]/BattleScene.unity
+    guid: 40a5c2cbbc0dcb841812ffbebb9dbca9
   m_configObjects: {}

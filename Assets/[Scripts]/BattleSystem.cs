@@ -17,6 +17,10 @@ public class BattleSystem : MonoBehaviour
     public Buffs playerBuff;
     public Debuffs playerDebuff;
     public bool isPlayerTurn = true;
+    public Text playerNameText;
+    public Text healthText;
+    public Text manaText;
+    public AudioSource audioSource;
 
     [Header("Enemy Properties")]
     public string enemyName;
@@ -25,13 +29,30 @@ public class BattleSystem : MonoBehaviour
     public List<PlayerAbility> enemyAbilities;
     public Buffs enemyBuff;
     public Debuffs enemyDebuff;
+    public GameObject enemySprite;
 
     float timeBetweenTurns = 0.0f;
+
+    [SerializeField]
+    private RandomEncounter encounteredEnemy;
+
+
+    private void Awake()
+    {
+        encounteredEnemy = FindObjectOfType<RandomEncounter>();
+
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        historyText.text = enemyName + " stands in your way";
+        enemySprite.GetComponent<SpriteRenderer>().sprite = encounteredEnemy.enemy.battleSprite;
+        playerName = playerNameText.text.Replace("\n", "");
+        historyText.text = encounteredEnemy.enemy.enemyName + " stands in your way";
+        healthText.text = playerHealth.ToString();
+        manaText.text = playerMana.ToString();
+        audioSource.clip = encounteredEnemy.enemy.battleTheme;
+        audioSource.Play();
         playerAbilities = Resources.LoadAll<PlayerAbility>("PlayerAbilities");
     }
 
@@ -105,7 +126,7 @@ public class BattleSystem : MonoBehaviour
 
     public void EnemyAction()
     {
-        historyText.text = enemyName + " does nothing";
+        historyText.text = encounteredEnemy.enemy.enemyName + " does nothing";
         timeBetweenTurns = 0.0f;
         SwapTurns();
     }

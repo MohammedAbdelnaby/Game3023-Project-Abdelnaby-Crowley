@@ -2744,7 +2744,7 @@ GameObject:
   - component: {fileID: 1195717095}
   - component: {fileID: 1195717094}
   m_Layer: 0
-  m_Name: Yukari_Battlesprite
+  m_Name: EnemySprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2791,7 +2791,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 40ff36b2ff0a322419eea9450c2e664d, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2799,7 +2799,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 2.55}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1195717095
@@ -3899,12 +3899,18 @@ MonoBehaviour:
   playerBuff: 0
   playerDebuff: 0
   isPlayerTurn: 1
+  playerNameText: {fileID: 0}
+  healthText: {fileID: 0}
+  manaText: {fileID: 0}
+  audioSource: {fileID: 0}
   enemyName: Yukari
   enemyHealth: 100
   enemyMana: 100
   enemyAbilities: []
   enemyBuff: 0
   enemyDebuff: 0
+  enemySprite: {fileID: 1195717093}
+  encounteredEnemy: {fileID: 0}
 --- !u!4 &1697964973
 Transform:
   m_ObjectHideFlags: 0

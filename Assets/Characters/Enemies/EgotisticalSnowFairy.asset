@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 788d3ae04660d4c45b5a11bca91c66c7, type: 3}
+  m_Name: EgotisticalSnowFairy
+  m_EditorClassIdentifier: 
+  battleSprite: {fileID: 21300000, guid: 766c3e85b1736024c8009e6b614e5480, type: 3}
+  enemyName: Egotisical Snow Fairy
+  health: 100
+  mana: 100
+  battleTheme: {fileID: 8300000, guid: ce4247aba93dadb42a643ec65bab14ec, type: 3}
