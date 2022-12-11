@@ -5,25 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
+    public TransitionManager transitionManager;
+
+    private void Start()
+    {
+        transitionManager = FindObjectOfType<TransitionManager>();
+    }
 
     public void ContinueButton()
     {
-        SceneManager.LoadScene("OverWorld");
+        transitionManager.FadeToLevel(3);
     }
 
     public void NewWorldButton()
     {
-        SceneManager.LoadScene("OverWorld");
+        transitionManager.FadeToLevel(3);
     }
 
     public void MainMenuButton()
     {
-        SceneManager.LoadScene("MainMenu");
+        transitionManager.FadeToLevel(1);
     }
 
     public void CreditsButton()
     {
-        SceneManager.LoadScene("Credits");
+        transitionManager.FadeToLevel(2);
     }
 
     public void QuitButton()

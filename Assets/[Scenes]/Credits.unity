@@ -258,6 +258,69 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1522515}
   m_CullTransparentMesh: 1
+--- !u!1001 &81346667
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3601467923110756911, guid: e33603d5dc73a4840a7173512ce499ce, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2145060227}
+    - target: {fileID: 6107575264843580849, guid: e33603d5dc73a4840a7173512ce499ce, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6107575264843580849, guid: e33603d5dc73a4840a7173512ce499ce, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.0831387
+      objectReference: {fileID: 0}
+    - target: {fileID: 6107575264843580849, guid: e33603d5dc73a4840a7173512ce499ce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.3825715
+      objectReference: {fileID: 0}
+    - target: {fileID: 6107575264843580849, guid: e33603d5dc73a4840a7173512ce499ce, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.1444793
+      objectReference: {fileID: 0}
+    - target: {fileID: 6107575264843580849, guid: e33603d5dc73a4840a7173512ce499ce, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6107575264843580849, guid: e33603d5dc73a4840a7173512ce499ce, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6107575264843580849, guid: e33603d5dc73a4840a7173512ce499ce, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6107575264843580849, guid: e33603d5dc73a4840a7173512ce499ce, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6107575264843580849, guid: e33603d5dc73a4840a7173512ce499ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6107575264843580849, guid: e33603d5dc73a4840a7173512ce499ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6107575264843580849, guid: e33603d5dc73a4840a7173512ce499ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6782308919800195057, guid: e33603d5dc73a4840a7173512ce499ce, type: 3}
+      propertyPath: m_Name
+      value: TranstionManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: e33603d5dc73a4840a7173512ce499ce, type: 3}
 --- !u!1 &82731595
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,7 +377,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1679734639
-  m_SortingLayer: 4
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6ee5cd8a4c778ff42b46cc0a5f06307d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -414,7 +477,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1567157893
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -2712,7 +2775,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1679734639
-  m_SortingLayer: 4
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 024246837fb21b9489a82f099e237a1e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3084,7 +3147,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1294398685
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -3582,6 +3645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a71dc8f9f4e8d948bb9740f91fa5620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionManager: {fileID: 0}
 --- !u!1 &1991464515
 GameObject:
   m_ObjectHideFlags: 0

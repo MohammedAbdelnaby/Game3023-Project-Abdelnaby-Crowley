@@ -1,42 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TransitionManager : MonoBehaviour
 {
-    public Animator bTransiton;
+    [SerializeField]
+    private Animator animator;
 
-    public Animator lTransition;
+    private int LevelToLoad;
 
-    private RandomEncounter randomEncounterManager;
-
-    private void Awake()
+    public void FadeToLevel(int LevelIndex)
     {
-        randomEncounterManager = FindObjectOfType<RandomEncounter>();
-
+        LevelToLoad = LevelIndex;
+        animator.SetTrigger("ChangeScene");
     }
 
-    public void BattleTransition()
+    private void OnChangeComplete()
     {
-        StartCoroutine(PlayBattleTransiton());
-    }
-
-    public IEnumerator PlayBattleTransiton()
-    {
-
-        bTransiton.SetTrigger("SpinStart");
-
-        yield return new WaitForSeconds(3.0f);
-
-        randomEncounterManager.StartBattle();
-
-    }
-
-    public IEnumerator PlayLevelTransition()
-    {
-        lTransition.SetTrigger("StartFade");
-
-        yield return new WaitForSeconds(0.84f);
-
+        SceneManager.LoadScene(LevelToLoad);
     }
 }
