@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
-    public TransitionManager transitionManager;
+    private TransitionManager transitionManager;
 
     private void Start()
     {
@@ -19,6 +19,9 @@ public class ButtonManager : MonoBehaviour
 
     public void NewWorldButton()
     {
+        PlayerPrefs.SetFloat("X", 0.0f);
+        PlayerPrefs.SetFloat("Y", 1.0f);
+        PlayerPrefs.SetFloat("Z", 0.0f);
         transitionManager.FadeToLevel(3);
     }
 

@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
         direction = PlayerAnimationState.IDLE_SOUTH;
         animator = GetComponent<Animator>();
         particleSystem = GetComponentInChildren<ParticleSystem>();

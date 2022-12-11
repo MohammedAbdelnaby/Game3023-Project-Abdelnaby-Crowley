@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 1522518}
   - component: {fileID: 1522517}
   m_Layer: 5
-  m_Name: Mohammed (1)
+  m_Name: Patrick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 281, y: 66}
-  m_SizeDelta: {x: 299.43, y: 74.86}
+  m_AnchoredPosition: {x: 679.28, y: 157}
+  m_SizeDelta: {x: 566.43, y: 141.61}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1522517
 MonoBehaviour:
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 38.6
+  m_fontSize: 72
   m_fontSizeBase: 56.54
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -377,7 +377,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1679734639
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6ee5cd8a4c778ff42b46cc0a5f06307d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2622,8 +2622,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 779, y: -471}
-  m_SizeDelta: {x: 366.99, y: 68.81}
+  m_AnchoredPosition: {x: 646.42, y: -481.21}
+  m_SizeDelta: {x: 627.16, y: 117.59}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &702175782
 MonoBehaviour:
@@ -2775,7 +2775,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1679734639
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 024246837fb21b9489a82f099e237a1e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2838,8 +2838,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -321, y: 66}
-  m_SizeDelta: {x: 298.25, y: 85.51}
+  m_AnchoredPosition: {x: -716, y: 139}
+  m_SizeDelta: {x: 522.19, y: 149.72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1022673285
 MonoBehaviour:
@@ -2870,8 +2870,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4282729983
+  m_fontColor: {r: 1, g: 0.2688679, b: 0.2688679, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2888,7 +2888,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 41.15
+  m_fontSize: 71.9
   m_fontSizeBase: 56.54
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3025,10 +3025,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.3
+  m_fontSize: 58.3
   m_fontSizeBase: 26.3
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -3061,7 +3061,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 92.09572, y: 6.800501, z: 91.45218, w: 29.932098}
+  m_margin: {x: 154.98578, y: 15.106733, z: 157.9021, w: 44.17136}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
