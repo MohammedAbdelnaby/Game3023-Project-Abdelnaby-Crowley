@@ -60,7 +60,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 6
     m_ConditionEvent: State
-    m_EventTreshold: 7
+    m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7999650319933567081}
   m_Solo: 0
@@ -238,7 +238,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WALK_SOUTH
+  m_Name: IDLE_SOUTH
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -251,7 +251,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 456aef759b46eb24c86bf5a59750720c, type: 2}
+  m_Motion: {fileID: 7400000, guid: 37c8b9122bf27cf4d8255e2589263d82, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -369,7 +369,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 6
     m_ConditionEvent: State
-    m_EventTreshold: 3
+    m_EventTreshold: 7
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 212507152009393375}
   m_Solo: 0
@@ -443,7 +443,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: IDLE_SOUTH
+  m_Name: WALK_SOUTH
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -456,7 +456,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 37c8b9122bf27cf4d8255e2589263d82, type: 2}
+  m_Motion: {fileID: 7400000, guid: 456aef759b46eb24c86bf5a59750720c, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

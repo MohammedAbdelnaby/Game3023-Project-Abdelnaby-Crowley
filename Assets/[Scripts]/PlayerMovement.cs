@@ -7,9 +7,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float speed;
 
-    private Animator animator;
 
+    private Animator animator;
     private PlayerAnimationState direction;
+    private ParticleSystem particleSystem;
 
     public float Speed { get => speed; set => speed = value; }
 
@@ -17,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     {
         direction = PlayerAnimationState.IDLE_SOUTH;
         animator = GetComponent<Animator>();
+        particleSystem = GetComponentInChildren<ParticleSystem>();
     }
 
     // Update is called once per frame
@@ -44,30 +46,34 @@ public class PlayerMovement : MonoBehaviour
     {
         float X = Input.GetAxisRaw("Horizontal");
         float Y = Input.GetAxisRaw("Vertical");
-        Debug.Log(X + " , " + Y);
         //Walking
         //North
         if (Y > 0.0f)
         {
             ChangeAnimationDirectionState(PlayerAnimationState.WALK_NORTH);
+            particleSystem.Play();
         }
         //East
         else if (X > 0.0f)
         {
             ChangeAnimationDirectionState(PlayerAnimationState.WALK_EAST);
+            particleSystem.Play();
         }
         //South
         else if(Y < 0.0f)
         {
             ChangeAnimationDirectionState(PlayerAnimationState.WALK_SOUTH);
+            particleSystem.Play();
         }
         //West
         else if(X < 0.0f)
         {
             ChangeAnimationDirectionState(PlayerAnimationState.WALK_WEST);
+            particleSystem.Play();
         }//IDLE
         else if (X == 0.0f && Y == 0.0f)
         {
+            particleSystem.Pause();
             switch (direction)
             {
                 case PlayerAnimationState.WALK_NORTH:
