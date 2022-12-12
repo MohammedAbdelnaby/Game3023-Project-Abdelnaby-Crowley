@@ -2788,7 +2788,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PROJECT RPG
+  m_text: Legends of Gensokyo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ad1ad18f3b8e975408fd9ec887bb3b07, type: 2}
   m_sharedMaterial: {fileID: -936006638965504917, guid: ad1ad18f3b8e975408fd9ec887bb3b07, type: 2}
@@ -3664,7 +3664,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1294398685
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
