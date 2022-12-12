@@ -14,7 +14,7 @@ public class ButtonManager : MonoBehaviour
 
     public void ContinueButton()
     {
-        transitionManager.FadeToLevel(3);
+        transitionManager.FadeToLevel(2);
     }
 
     public void NewWorldButton()
@@ -22,17 +22,17 @@ public class ButtonManager : MonoBehaviour
         PlayerPrefs.SetFloat("X", 0.0f);
         PlayerPrefs.SetFloat("Y", 1.0f);
         PlayerPrefs.SetFloat("Z", 0.0f);
-        transitionManager.FadeToLevel(3);
+        transitionManager.FadeToLevel(2);
     }
 
     public void MainMenuButton()
     {
-        transitionManager.FadeToLevel(1);
+        transitionManager.FadeToLevel(0);
     }
 
     public void CreditsButton()
     {
-        transitionManager.FadeToLevel(2);
+        transitionManager.FadeToLevel(1);
     }
 
     public void QuitButton()
@@ -45,6 +45,5 @@ public class ButtonManager : MonoBehaviour
         #else
         Application.Quit();
         #endif
-
     }
 }

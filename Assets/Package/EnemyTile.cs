@@ -21,7 +21,7 @@ public class EnemyTile : MonoBehaviour
             {
                 randomEncounterManager.StartBattle();
                 collision.GetComponent<PlayerMovement>().Speed = 0.0f;
-                transitionManager.FadeToLevel(4);
+                transitionManager.FadeToLevel(3);
                 Debug.Log("You are under attack");
             }
         }
