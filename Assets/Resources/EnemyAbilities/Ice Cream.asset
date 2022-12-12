@@ -9,17 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 567bd80d9e8a62443bd306333a47393c, type: 3}
-  m_Name: FireBall
+  m_Script: {fileID: 11500000, guid: 790dd00c19de51844950ea49fb80b70f, type: 3}
+  m_Name: Ice Cream
   m_EditorClassIdentifier: 
-  Name: Fireball
-  Description: meeeeaaatbbbbbaaaaaal
-  Type: 2
-  Buff: 0
+  Name: Ice cream
+  Description: An Ice cream man drives by.
+  Type: 3
+  Buff: 2
   Debuff: 0
-  ManaCost: 25
-  Damage: 50
-  DamageType: 2
+  ManaCost: 10
+  Damage: 0
+  DamageType: 0
   ArmourGain: 0
   ArmourDamage: 0
-  Heal: 0
+  Heal: 5

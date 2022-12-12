@@ -15,8 +15,11 @@ MonoBehaviour:
   Name: magic shield
   Description: meeeeeaaaaatbaaaalllll shield
   Type: 3
-  Buff: 2
+  Buff: 5
   Debuff: 0
-  ManaCost: 5
+  ManaCost: 10
   Damage: 0
+  DamageType: 0
+  ArmourGain: 10
+  ArmourDamage: 0
   Heal: 0

@@ -28,13 +28,23 @@ public class AbilityButton : MonoBehaviour
     {
         if (battleSystem.isPlayerTurn)
         {
-            battleSystem.enemyHealth -= ability.Damage;
-            battleSystem.playerMana -= ability.ManaCost;
+            battleSystem.enemyArmour -= (battleSystem.enemyArmour > 0) ? ability.ArmourDamage : 0;
+            if (battleSystem.enemyArmour > 0.0f)
+            {
+                battleSystem.enemyArmour -= battleSystem.AbilityChange(ability);
+            }
+            else
+            {
+                battleSystem.enemyHealth -= battleSystem.AbilityChange(ability);
+            }
             battleSystem.enemyDebuff = ability.Debuff;
-            battleSystem.playerBuff = ability.Buff;
+
+            battleSystem.playerMana -= ability.ManaCost;
+            battleSystem.playerArmour += ability.ArmourGain;
             battleSystem.playerHealth += ability.Heal;
-            battleSystem.isPlayerTurn = false;
-            battleSystem.historyText.text = ability.Name + ": " + ability.Description; 
+            battleSystem.playerBuff = ability.Buff;
+            battleSystem.historyText.text = ability.Description;
+            battleSystem.SwapTurns();
         }
     }
 }

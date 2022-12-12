@@ -3,5 +3,8 @@ public enum Buffs
 {
     NONE,
     STRENGHT,
-    ARMOUR,
+    ICE_RESISTANCE,
+    FIRE__RESISTANCE,
+    SLASHING__RESISTANCE,
+    ACID__RESISTANCE
 }

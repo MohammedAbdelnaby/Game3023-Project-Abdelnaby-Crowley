@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+//Source: https://www.youtube.com/watch?v=Oadq-IrOazg help with Transistions, also used it in the Transistion EX 9
 public class TransitionManager : MonoBehaviour
 {
     [SerializeField]

@@ -17,16 +17,20 @@ public class BattleUI : MonoBehaviour
     [Header("Player UI Properties")]
     public TMP_Text playerHealth;
     public TMP_Text playerMana;
+    public TMP_Text playerArmour;
 
     [Header("Enemy UI Properties")]
     public TMP_Text enemyHealth;
     public TMP_Text enemyMana;
+    public TMP_Text enemyArmour;
 
     private BattleSystem battleSystem;
     private List<PlayerAbility> playerAttackAbilies;
     private List<PlayerAbility> playerMagicAbilies;
     private List<PlayerAbility> playerDefenceAbilies;
     private int mainMenuState;
+    private TransitionManager transitionManager;
+    private Button FleeButton;
 
     public int MainMenuState { get => mainMenuState; set => mainMenuState = (value < 0) ? 0 : value; }
 
@@ -38,6 +42,7 @@ public class BattleUI : MonoBehaviour
         playerAttackAbilies = new List<PlayerAbility>();
         playerMagicAbilies = new List<PlayerAbility>();
         playerDefenceAbilies = new List<PlayerAbility>();
+        FleeButton = GameObject.Find("Run").GetComponent<Button>();
         CreateButtons();
     }
 
@@ -46,6 +51,7 @@ public class BattleUI : MonoBehaviour
     {
         ChangeState();
         UpdateUI();
+        FleeButton.interactable = battleSystem.isPlayerTurn;
     }
 
     private void ChangeState()
@@ -97,9 +103,13 @@ public class BattleUI : MonoBehaviour
         //Enemy UI, and player UI (health, mana)
         playerHealth.text = battleSystem.playerHealth.ToString();
         playerMana.text = battleSystem.playerMana.ToString();
+        playerArmour.text = battleSystem.playerArmour.ToString();
 
         enemyHealth.text = battleSystem.enemyHealth.ToString();
         enemyMana.text = battleSystem.enemyMana.ToString();
+        enemyArmour.text = battleSystem.enemyArmour.ToString();
+
+
     }
 
     private void CreateButtons()

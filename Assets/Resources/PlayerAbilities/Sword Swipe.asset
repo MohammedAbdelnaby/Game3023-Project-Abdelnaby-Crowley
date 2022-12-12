@@ -19,4 +19,7 @@ MonoBehaviour:
   Debuff: 0
   ManaCost: 0
   Damage: 25
+  DamageType: 3
+  ArmourGain: 0
+  ArmourDamage: 0
   Heal: 0

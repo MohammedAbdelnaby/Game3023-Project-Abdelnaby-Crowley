@@ -13,18 +13,23 @@ public class EnemyTile : MonoBehaviour
     {
         transitionManager = FindObjectOfType<TransitionManager>();
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
         {
-            if (Random.value >= 0.5f)
+            if (collision.tag == "Player")
             {
-                randomEncounterManager.StartBattle();
-                collision.GetComponent<PlayerMovement>().Speed = 0.0f;
-                transitionManager.FadeToLevel(3);
-                Debug.Log("You are under attack");
-            }
+                if (Random.value >= 0.90f)
+                {
+                    randomEncounterManager.StartBattle();
+                    collision.GetComponent<PlayerMovement>().Speed = 0.0f;
+                    PlayerPrefs.SetFloat("X", collision.transform.position.x);
+                    PlayerPrefs.SetFloat("Y", collision.transform.position.y);
+                    PlayerPrefs.SetFloat("Z", collision.transform.position.z);
+                    transitionManager.FadeToLevel(3);
+                    Debug.Log("You are under attack");
+                }
+            } 
         }
-
     }
 }

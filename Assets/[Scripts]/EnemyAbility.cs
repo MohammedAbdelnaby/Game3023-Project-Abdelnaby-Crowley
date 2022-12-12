@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Ability", menuName = "Ability/New Ability")]
-public class PlayerAbility : ScriptableObject
+[CreateAssetMenu(fileName = "New Enemy Ability", menuName = "Ability/New Enemy Ability")]
+public class EnemyAbility : ScriptableObject
 {
     public string Name;
     public string Description;

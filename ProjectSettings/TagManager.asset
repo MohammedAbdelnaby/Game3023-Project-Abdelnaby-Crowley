@@ -56,6 +56,9 @@ TagManager:
   - name: OnGround
     uniqueID: 1294398685
     locked: 0
+  - name: Partical
+    uniqueID: 1701372171
+    locked: 0
   - name: Player
     uniqueID: 2991558555
     locked: 0
@@ -64,9 +67,6 @@ TagManager:
     locked: 0
   - name: UpperGround
     uniqueID: 3013104837
-    locked: 0
-  - name: Partical
-    uniqueID: 1701372171
     locked: 0
   - name: UI
     uniqueID: 2615232657

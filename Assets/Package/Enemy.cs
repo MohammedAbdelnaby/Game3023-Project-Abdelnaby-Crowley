@@ -11,8 +11,6 @@ public class Enemy : ScriptableObject
     public int health;
     public int mana;
     public AudioClip battleTheme;
-
-    //partner will help add their abilites to this
-
-    
+    public List<EnemyAbility> abilities;
+    public EnemyBehaviour behaviour;
 }

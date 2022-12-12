@@ -19,6 +19,6 @@ public class RandomEncounter : MonoBehaviour
     {
         int i = Random.Range(0, listOfEnemies.Count);
         enemy = listOfEnemies[i];
-        transitionManager.FadeToLevel(4);
+        transitionManager.FadeToLevel(3);
     }
 }
