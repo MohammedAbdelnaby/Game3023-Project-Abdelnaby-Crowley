@@ -36,6 +36,10 @@ public class BattleSystem : MonoBehaviour
 
     public AudioSource audioSource;
     private TransitionManager transitionManager;
+
+    [SerializeField]
+    private PlayerMovement playerRef;
+
     private void Awake()
     {
         //enemy = FindObjectOfType<RandomEncounter>().enemy;

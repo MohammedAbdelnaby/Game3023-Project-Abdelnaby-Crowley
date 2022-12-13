@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    public int maxHP;
+    public int maxMP;
+    public int currentHP;
+    public int currentMP;
+
+    public Inventory playerInventory;
+
     [SerializeField]
     private float speed;
 
@@ -11,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private PlayerAnimationState direction;
     private ParticleSystem particleSystem;
+
+
 
     public float Speed { get => speed; set => speed = value; }
 
