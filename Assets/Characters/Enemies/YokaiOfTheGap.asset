@@ -16,4 +16,12 @@ MonoBehaviour:
   enemyName: Yokai of the Gap
   health: 100
   mana: 100
-  battleTheme: {fileID: 8300000, guid: 5e789eeb6bc454042a35ac272d25c12a, type: 3}
+  abilities:
+  - {fileID: 11400000, guid: 92bb859481a55a04c9b87eedd0bb3d23, type: 2}
+  - {fileID: 11400000, guid: e9d1eba5f5965494ba3f0f18a838bccb, type: 2}
+  - {fileID: 11400000, guid: b70f450570769c543895377b73962898, type: 2}
+  - {fileID: 11400000, guid: 0ff74bb0f4616bd4095718c48a039081, type: 2}
+  - {fileID: 11400000, guid: 7e32c9d14e4e82a459a2d33e0d378834, type: 2}
+  - {fileID: 11400000, guid: 6ad36fddb47c8aa45a032a758231db13, type: 2}
+  - {fileID: 11400000, guid: 2762c0d1a18a5594c977f75eab21a422, type: 2}
+  behaviour: 1

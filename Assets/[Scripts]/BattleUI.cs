@@ -86,13 +86,6 @@ public class BattleUI : MonoBehaviour
                 defenceParent.SetActive(true);
                 ItemParent.SetActive(false);
                 break;
-            case 4:// Item
-                mainMenu.SetActive(false);
-                attackParent.SetActive(false);
-                magicParent.SetActive(false);
-                defenceParent.SetActive(false);
-                ItemParent.SetActive(true);
-                break;
             default:
                 break;
         }

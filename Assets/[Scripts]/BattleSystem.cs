@@ -41,7 +41,7 @@ public class BattleSystem : MonoBehaviour
 
     private void Awake()
     {
-        //enemy = FindObjectOfType<RandomEncounter>().enemy;
+        enemy = FindObjectOfType<RandomEncounter>().enemy;
     }
 
     // Start is called before the first frame update

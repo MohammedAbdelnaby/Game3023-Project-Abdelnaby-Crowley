@@ -21,7 +21,7 @@ public class EnemyTile : MonoBehaviour
         {
             if (collision.tag == "Player")
             {
-                if (Random.value >= 0.90f)
+                if (Random.value >= 0.70f)
                 {
                     soundManager.PlaySoundFX(Sound.BATTLE_ALERT, Channel.FX_BATTLE_ALERT);
                     randomEncounterManager.StartBattle();
