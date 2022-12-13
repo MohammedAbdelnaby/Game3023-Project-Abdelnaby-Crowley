@@ -20,8 +20,6 @@ public class PlayerMovement : MonoBehaviour
     private PlayerAnimationState direction;
     private ParticleSystem particleSystem;
 
-
-
     public float Speed { get => speed; set => speed = value; }
 
     private void Start()

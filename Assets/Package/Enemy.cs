@@ -10,7 +10,6 @@ public class Enemy : ScriptableObject
     public string enemyName;
     public int health;
     public int mana;
-    public AudioClip battleTheme;
     public List<EnemyAbility> abilities;
     public EnemyBehaviour behaviour;
 }

@@ -31,8 +31,6 @@ public class ItemSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     [SerializeField]
     Image itemIcon;
 
-
-
     [SerializeField]
     TextMeshProUGUI itemCountText;
 
@@ -93,8 +91,6 @@ public class ItemSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 Debug.Log(playerRef.currentMP);
             }
             Count--;
-            
-
         }
     }
 
@@ -120,6 +116,4 @@ public class ItemSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             nameText.text = "";
         }
     }
-
-    
 }

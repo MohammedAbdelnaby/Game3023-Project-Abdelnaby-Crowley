@@ -10,12 +10,14 @@ public class AbilityButton : MonoBehaviour
 
     public BattleSystem battleSystem;
     private Button button;
+    private SoundManager soundManager;
     // Start is called before the first frame update
     void Start()
     {
         battleSystem = GameObject.Find("BattleManager").GetComponent<BattleSystem>();
         button = GetComponent<Button>();
         GetComponentInChildren<TMP_Text>().text = ability.name;
+        soundManager = FindObjectOfType<SoundManager>();
     }
 
     // Update is called once per frame
@@ -28,23 +30,36 @@ public class AbilityButton : MonoBehaviour
     {
         if (battleSystem.isPlayerTurn)
         {
-            battleSystem.enemyArmour -= (battleSystem.enemyArmour > 0) ? ability.ArmourDamage : 0;
-            if (battleSystem.enemyArmour > 0.0f)
+            if (ability.ManaCost <= battleSystem.playerMana)
             {
-                battleSystem.enemyArmour -= battleSystem.AbilityChange(ability);
+                OnClick();
+                battleSystem.enemyArmour -= (battleSystem.enemyArmour > 0) ? ability.ArmourDamage : 0;
+                if (battleSystem.enemyArmour > 0.0f)
+                {
+                    battleSystem.enemyArmour -= battleSystem.AbilityChange(ability);
+                }
+                else
+                {
+                    battleSystem.enemyHealth -= battleSystem.AbilityChange(ability);
+                }
+                battleSystem.enemyDebuff = ability.Debuff;
+
+                battleSystem.playerMana -= ability.ManaCost;
+                battleSystem.playerArmour += ability.ArmourGain;
+                battleSystem.playerHealth += ability.Heal;
+                battleSystem.playerBuff = ability.Buff;
+                battleSystem.historyText.text = ability.Description;
+                battleSystem.SwapTurns(); 
             }
             else
             {
-                battleSystem.enemyHealth -= battleSystem.AbilityChange(ability);
+                battleSystem.historyText.text = "You dont have enough mana for " + ability.name;
             }
-            battleSystem.enemyDebuff = ability.Debuff;
-
-            battleSystem.playerMana -= ability.ManaCost;
-            battleSystem.playerArmour += ability.ArmourGain;
-            battleSystem.playerHealth += ability.Heal;
-            battleSystem.playerBuff = ability.Buff;
-            battleSystem.historyText.text = ability.Description;
-            battleSystem.SwapTurns();
         }
+    }
+
+    public void OnClick()
+    {
+        soundManager.PlaySoundFX(Sound.BUTTTON_CLICK, Channel.FX_BUTTON_CLICKED);
     }
 }

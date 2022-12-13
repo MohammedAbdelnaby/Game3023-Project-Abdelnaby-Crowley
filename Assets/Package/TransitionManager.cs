@@ -22,4 +22,12 @@ public class TransitionManager : MonoBehaviour
     {
         SceneManager.LoadScene(LevelToLoad);
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            FadeToLevel(0);
+        }
+    }
 }

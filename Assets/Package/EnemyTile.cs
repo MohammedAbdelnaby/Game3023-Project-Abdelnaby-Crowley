@@ -7,10 +7,12 @@ public class EnemyTile : MonoBehaviour
 {
     public RandomEncounter randomEncounterManager;
     public TransitionManager transitionManager;
+    private SoundManager soundManager;
 
     // Start is called before the first frame update
     void Start()
     {
+        soundManager = FindObjectOfType<SoundManager>();
         transitionManager = FindObjectOfType<TransitionManager>();
     }
     private void OnTriggerStay2D(Collider2D collision)
@@ -21,6 +23,7 @@ public class EnemyTile : MonoBehaviour
             {
                 if (Random.value >= 0.90f)
                 {
+                    soundManager.PlaySoundFX(Sound.BATTLE_ALERT, Channel.FX_BATTLE_ALERT);
                     randomEncounterManager.StartBattle();
                     collision.GetComponent<PlayerMovement>().Speed = 0.0f;
                     PlayerPrefs.SetFloat("X", collision.transform.position.x);

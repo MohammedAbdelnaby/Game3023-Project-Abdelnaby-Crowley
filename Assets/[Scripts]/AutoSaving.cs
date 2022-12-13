@@ -28,6 +28,8 @@ public class AutoSaving : MonoBehaviour
     private IEnumerator ShowText()
     {
         text.SetActive(true);
+        PlayerPrefs.SetInt("Health", player.currentHP);
+        PlayerPrefs.SetInt("Mana", player.currentMP);
         PlayerPrefs.SetFloat("X", player.transform.position.x);
         PlayerPrefs.SetFloat("Y", player.transform.position.y);
         PlayerPrefs.SetFloat("Z", player.transform.position.z);

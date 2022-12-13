@@ -1,7 +1,7 @@
 [System.Serializable]
 public enum Channel
 {
-    PLAYER_FX_WALKING,
-    PLAYER_FX_BUSHES,
+    FX_BATTLE_ALERT,
+    FX_BUTTON_CLICKED,
     MUSIC
 }

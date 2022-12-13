@@ -283,3 +283,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ability: {fileID: 0}
+  battleSystem: {fileID: 0}

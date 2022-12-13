@@ -34,7 +34,6 @@ public class BattleSystem : MonoBehaviour
 
     public int EnemyTurnCount;
 
-    public AudioSource audioSource;
     private TransitionManager transitionManager;
 
     [SerializeField]
@@ -48,10 +47,9 @@ public class BattleSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        LoadSave();
         enemySprite.sprite = enemy.battleSprite;
         historyText.text = enemy.enemyName + " stands in your way";
-        audioSource.clip = enemy.battleTheme;
-        audioSource.Play();
         playerAbilities = Resources.LoadAll<PlayerAbility>("PlayerAbilities");
         SplitEnemyAbilities();
         Initialize();
@@ -70,10 +68,12 @@ public class BattleSystem : MonoBehaviour
         }
         if (enemyHealth <= 0.0f)
         {
+            Save();
             transitionManager.FadeToLevel(2);
         }
         if (playerHealth <= 0.0f)
         {
+            ResetSave();
             PlayerPrefs.SetFloat("X", 0.0f);
             PlayerPrefs.SetFloat("Y", 1.0f);
             PlayerPrefs.SetFloat("Z", 0.0f);
@@ -472,5 +472,23 @@ public class BattleSystem : MonoBehaviour
             historyText.text = "You tried to flee but failed.";
             SwapTurns();
         }
+    }
+
+    public void Save()
+    {
+        PlayerPrefs.SetInt("Health", playerHealth);
+        PlayerPrefs.SetInt("Mana", playerMana);
+    }
+
+    public void ResetSave()
+    {
+        PlayerPrefs.SetInt("Health", 100);
+        PlayerPrefs.SetInt("Mana", 100);
+    }
+
+    public void LoadSave()
+    {
+        playerHealth = PlayerPrefs.GetInt("Health");
+        playerMana = PlayerPrefs.GetInt("Mana");
     }
 }

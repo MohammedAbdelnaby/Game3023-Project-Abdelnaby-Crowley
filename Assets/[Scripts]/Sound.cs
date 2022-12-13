@@ -1,9 +1,8 @@
 [System.Serializable]
 public enum Sound
 {
-    WALKING,
-    BUSHES,
-    MAINMENU,
+    BATTLE_ALERT,
+    BUTTTON_CLICK,
     OVERWORLD,
     BATTLE
 }

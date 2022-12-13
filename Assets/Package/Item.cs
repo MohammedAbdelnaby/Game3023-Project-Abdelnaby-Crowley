@@ -12,14 +12,8 @@ public class Item : ScriptableObject
     public int damageValue;
     public ItemType typeOfItem;
 
-    
-
     public void Use()
     {
-
-
-            Debug.Log("Used item: " + name + " - " + description);
-        
-        
+      Debug.Log("Used item: " + name + " - " + description);
     }
 }

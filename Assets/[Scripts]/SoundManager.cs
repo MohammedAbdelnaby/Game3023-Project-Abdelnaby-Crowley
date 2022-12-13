@@ -22,20 +22,20 @@ public class SoundManager : MonoBehaviour
     
     private void InitializeSoundSFX()
     {
-        audioClips.Add(Resources.Load<AudioClip>(""));
+        audioClips.Add(Resources.Load<AudioClip>("Audio/BattleAlert"));
+        audioClips.Add(Resources.Load<AudioClip>("Audio/ButtonClick"));
+        audioClips.Add(Resources.Load<AudioClip>("Audio/OverWorld"));
+        audioClips.Add(Resources.Load<AudioClip>("Audio/Battle"));
     }
 
     public void PlaySoundFX(Sound sound, Channel channel)
     {
         channels[(int)channel].clip = audioClips[(int)sound];
+        if (channel == Channel.MUSIC)
+        {
+            channels[(int)channel].volume = Volume;
+            channels[(int)channel].loop = true;
+        }
         channels[(int)channel].Play();
-    }
-
-    public void PlayMusic(Sound music)
-    {
-        channels[(int)Channel.MUSIC].clip = audioClips[(int)music];
-        channels[(int)Channel.MUSIC].volume = Volume;
-        channels[(int)Channel.MUSIC].loop = true;
-        channels[(int)Channel.MUSIC].Play();
     }
 }
